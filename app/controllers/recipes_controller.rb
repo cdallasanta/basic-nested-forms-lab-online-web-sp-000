@@ -16,11 +16,7 @@ class RecipesController < ApplicationController
   end
 
   def create
-    recipe = Recipe.new
-    recipe.title = recipe_params[:title]
-    recipe.ingredients_attributes = recipe_params[:ingredients_attributes]
-
-    recipe.save
+    recipe = Recipe.create(recipe_params)
   end
 
   private
