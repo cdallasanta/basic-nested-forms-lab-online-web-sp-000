@@ -34,3 +34,14 @@ class RecipesController < ApplicationController
     )
   end
 end
+
+recipe.ingredients_attributes= {
+  "0" => {
+    name: "chocolate",
+    quantity: "many"
+  },
+  "1" => {
+    name: "flour",
+    quantity: "some"
+  }
+}
